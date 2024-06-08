@@ -22,6 +22,13 @@ const config: Config = {
         medium: "500",
         semibold: "600",
         bold: "700"
+      },
+      colors: {
+        text_primary: "#000000",
+        text_secondary: "#3C3C43CC",
+        border_gray: "#9797974D"
+        // gray50: "#97979780"
+        // gray80: "#9797974D"
       }
     }
   },
