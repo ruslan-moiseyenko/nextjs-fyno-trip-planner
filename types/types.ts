@@ -18,7 +18,7 @@ export type ItineraryType = {
   tags: string[];
 };
 
-export type RegionHighlightsType = {
+export type CardInfoType = {
   id: number;
   title: string;
   description: string;
@@ -26,15 +26,12 @@ export type RegionHighlightsType = {
   isBookmarked: boolean;
   estimation: string;
   image: string;
-};
-
-export type WhereToStayType = RegionHighlightsType & {
-  rating: string;
+  rating?: string;
 };
 
 export type RegionType = {
   id: number;
   generalInfo: ItineraryType;
-  regionalHighlights: RegionHighlightsType[];
-  whereToStay: WhereToStayType[];
+  regionalHighlights: CardInfoType[];
+  whereToStay: CardInfoType[];
 };

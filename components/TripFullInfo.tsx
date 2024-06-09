@@ -1,3 +1,4 @@
+import { RegionHighlights } from "@/components/RegionHighlights";
 import { RegionInfo } from "@/components/RegionInfo";
 import { RegionType } from "@/types/types";
 import React, { FC } from "react";
@@ -10,7 +11,7 @@ export const TripFullInfo: FC<TripFullInfoProps> = ({ data }) => {
   return (
     <article className="w-full">
       <RegionInfo data={data.generalInfo} />
-      <RegionInfo data={data.generalInfo} />
+      <RegionHighlights data={data.regionalHighlights} />
     </article>
   );
 };

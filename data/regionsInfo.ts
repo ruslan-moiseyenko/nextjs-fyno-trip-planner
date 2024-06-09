@@ -16,7 +16,7 @@ export const regionsInfo: RegionType = {
       estimation: "1h",
       isBookmarked: false,
       isCuratorsPick: true,
-      image: require("@/public/images/geysir.png"),
+      image: require("@/public/images/skogafoss.webp"),
     },
     {
       id: 101,
@@ -25,7 +25,7 @@ export const regionsInfo: RegionType = {
       estimation: "1h",
       isBookmarked: false,
       isCuratorsPick: true,
-      image: require("@/public/images/reykjad.png"),
+      image: require("@/public/images/img5.webp"),
     },
     {
       id: 102,
@@ -34,7 +34,7 @@ export const regionsInfo: RegionType = {
       estimation: "1h",
       isBookmarked: false,
       isCuratorsPick: true,
-      image: require("@/public/images/geysir.png"),
+      image: require("@/public/images/geyser.webp"),
     },
   ],
   whereToStay: [
