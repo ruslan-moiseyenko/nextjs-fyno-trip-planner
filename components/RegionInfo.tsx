@@ -9,7 +9,7 @@ export const RegionInfo: FC<RegionInfoProps> = ({
   data: { description, tags, title },
 }) => {
   return (
-    <ProgressBar progress="A">
+    <ProgressBar progress="A" isProgressBar>
       <h3 className="mb-1 text-xl font-semibold">{title}</h3>
       <div className="mb-2 flex gap-4">
         {tags.map((item, index) => (
