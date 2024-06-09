@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import arrowDown from "@/assets/svg/arrowDown.svg";
 import Image from "next/image";
@@ -40,7 +41,7 @@ export const TripleButton = () => {
         <select
           name="days"
           id="days"
-          className="relative appearance-none border-none px-5 py-2 focus:border-transparent focus:outline-none focus:ring-2"
+          className="relative appearance-none border-none px-5 py-2 focus:border-transparent focus:outline-none focus:ring-0"
         >
           {selectOptions.map((item) => (
             <option

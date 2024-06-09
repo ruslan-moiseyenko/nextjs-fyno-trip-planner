@@ -1,12 +1,13 @@
+"use client";
 import { ButtonCreate } from "@/components/ButtonCreate";
 import { TripleButton } from "@/components/TripleButton";
 import React from "react";
 
-export const Navigation = () => {
+export const Header = () => {
   return (
-    <div className="flex w-full py-5">
+    <header className="flex w-full py-5">
       <TripleButton />
       <ButtonCreate />
-    </div>
+    </header>
   );
 };

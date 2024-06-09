@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import img1 from "@/public/images/img1.jpg";
@@ -9,7 +10,7 @@ import { ButtonAllPhotos } from "@/components/ButtonAllPhotos";
 
 export const Gallery = () => {
   return (
-    <div className="relative flex w-full gap-1 overflow-hidden rounded-3xl">
+    <section className="relative flex w-full gap-1 overflow-hidden rounded-3xl">
       <div className="h-1 flex-1">
         <Image src={img1} alt="img1" />
       </div>
@@ -33,6 +34,6 @@ export const Gallery = () => {
         </div>
       </div>
       <ButtonAllPhotos styles="absolute right-3 bottom-2 rounded-full overflow-hidden" />
-    </div>
+    </section>
   );
 };

@@ -8,7 +8,7 @@ type ButtonAllPhotosProps = {
 export const ButtonAllPhotos: FC<ButtonAllPhotosProps> = ({ styles }) => {
   return (
     <div className={styles}>
-      <button className="flex items-center rounded-full bg-white bg-opacity-10 px-3 text-base font-semibold text-white backdrop-blur-md">
+      <button className="flex items-center rounded-full bg-white bg-opacity-10 pl-1 pr-3 text-base font-semibold text-white backdrop-blur-md">
         <Image src={dots} alt="dots" className="mr-1" />
         All photos
       </button>
