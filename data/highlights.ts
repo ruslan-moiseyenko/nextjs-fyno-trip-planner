@@ -1,4 +1,6 @@
-export const highlights = {
+import { HighlightsType } from "@/types/types";
+
+export const highlights: HighlightsType = {
   avatarImg: require("@/public/images/ava.png"),
   title: "Iceland’s Highlights",
   description:

@@ -1,25 +1,11 @@
 "use client";
-import React from "react";
+import { ShortTripInfoType } from "@/types/types";
+import React, { FC } from "react";
 
-const tripInfo = [
-  {
-    id: 1,
-    title: "Trip duration",
-    description: "7 days",
-  },
-  {
-    id: 2,
-    title: "Exploration",
-    description: "4 regions",
-  },
-  {
-    id: 3,
-    title: "Flight",
-    description: "7h 20m from SFO",
-  },
-];
-
-export const TripShortInfo = () => {
+type TripShortInfoProps = {
+  tripInfo: ShortTripInfoType[];
+};
+export const TripShortInfo: FC<TripShortInfoProps> = ({ tripInfo }) => {
   return (
     <section className="my-7 flex w-full items-center rounded-3xl border-[1px] border-border_gray p-6">
       <div className="flex gap-14">
@@ -32,7 +18,7 @@ export const TripShortInfo = () => {
           </div>
         ))}
       </div>
-      <p className="text-violet ml-auto">View itinerary</p>
+      <p className="ml-auto text-violet">View itinerary</p>
     </section>
   );
 };

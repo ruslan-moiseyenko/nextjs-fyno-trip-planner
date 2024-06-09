@@ -13,9 +13,9 @@ export const InputWithIcon: FC<InputWithIconProps> = ({
 }) => {
   return (
     <div
-      className={`border-border_blue flex overflow-hidden rounded-lg border-[1px] bg-white pl-4 pr-1 ${width ? width : ""}`}
+      className={`flex overflow-hidden rounded-lg border-[1px] border-border_blue bg-white pl-3 pr-1 ${width ? width : ""}`}
     >
-      {icon && <Image src={icon} alt="icon" className="mr-2" />}
+      {icon && <Image src={icon} alt="icon" className="mr-3" />}
       <input
         type="text"
         placeholder={placeholder}

@@ -26,7 +26,9 @@ const config: Config = {
       colors: {
         text_primary: "#000000",
         text_secondary: "#3C3C43CC",
+        text_trinary: "#3C3C4380",
         border_gray: "#9797974D",
+        border_light_gray: "#3C3C432D",
         border_blue: "#CCD7F1",
         violet: "#714EFF",
         background_secondary: "#DCE3F680",
