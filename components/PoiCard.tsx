@@ -8,7 +8,6 @@ type PoiCardProps = {
   item: CardInfoType;
 };
 export const PoiCard: FC<PoiCardProps> = ({ item }) => {
-  console.log(typeof item);
   return (
     <article className="relative w-[216px]">
       <div className="relative h-[292px] w-[216px] overflow-hidden rounded-xl">

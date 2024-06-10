@@ -6,26 +6,30 @@ import highlightsIcon from "@/assets/svg/highlights.svg";
 import bed from "@/assets/svg/bed.svg";
 
 type TripFullInfoProps = {
-  data: RegionType;
+  data: RegionType[];
 };
 
 export const TripFullInfo = forwardRef<HTMLDivElement, TripFullInfoProps>(
   ({ data }, ref) => {
     return (
       <article className="mb-6 w-full" ref={ref} id="target-scroll">
-        <RegionInfo data={data.generalInfo} />
-        <PoiHighlights
-          data={data.regionalHighlights}
-          title="Region highlights"
-          icon={highlightsIcon}
-          isProgressBar
-          showDailyButton
-        />
-        <PoiHighlights
-          data={data.whereToStay}
-          icon={bed}
-          title="Where to stay"
-        />
+        {data.map((item, index) => (
+          <div key={item.id} className="mb-6">
+            <RegionInfo data={item.generalInfo} index={index} />
+            <PoiHighlights
+              data={item.regionalHighlights}
+              title="Region highlights"
+              icon={highlightsIcon}
+              isProgressBar
+              showDailyButton
+            />
+            <PoiHighlights
+              data={item.whereToStay}
+              icon={bed}
+              title="Where to stay"
+            />
+          </div>
+        ))}
       </article>
     );
   },

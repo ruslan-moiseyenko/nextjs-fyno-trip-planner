@@ -60,7 +60,7 @@ export const CardCarousel: FC<CardCarouselProps> = ({ children }) => {
     <div className="relative flex h-full w-full items-center">
       {canScrollLeft && (
         <button
-          className="absolute left-0 top-1/3 z-10 h-10 w-10 rounded-full bg-white p-2 text-white"
+          className="absolute left-3 top-1/3 z-10 h-10 w-10 rounded-full bg-white p-2 text-white"
           onClick={scrollLeft}
         >
           <Image
@@ -82,7 +82,7 @@ export const CardCarousel: FC<CardCarouselProps> = ({ children }) => {
       </div>
       {canScrollRight && (
         <button
-          className="absolute right-0 top-1/3 z-10 rounded-full bg-white p-2 text-white"
+          className="absolute right-3 top-1/3 z-10 rounded-full bg-white p-2 text-white"
           onClick={scrollRight}
         >
           <Image
