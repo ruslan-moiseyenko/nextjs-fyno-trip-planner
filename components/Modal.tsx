@@ -40,7 +40,10 @@ export const Modal: React.FC<ModalProps> = ({ show, onClose }) => {
       className="fixed inset-0 z-50 flex w-full items-center justify-center bg-black bg-opacity-50"
       onClick={handleBackdropClick}
     >
-      <div className="rounded bg-white p-6" role="dialog">
+      <div
+        className="relative max-h-full overflow-y-auto rounded bg-white p-6"
+        role="dialog"
+      >
         <button className="absolute right-0 top-0 m-2" onClick={onClose}>
           &times;
         </button>
