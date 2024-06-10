@@ -20,18 +20,29 @@ export const Modal: React.FC<ModalProps> = ({ show, onClose }) => {
         onClose();
       }
     };
+
+    const disableScroll = (e: Event) => {
+      e.preventDefault();
+    };
+
     // prevent scrolling
     if (show) {
       document.body.style.overflow = "hidden";
       window.addEventListener("keyup", handleKeyUp);
+      window.addEventListener("wheel", disableScroll, { passive: false });
+      window.addEventListener("touchmove", disableScroll, { passive: false });
     } else {
       document.body.style.overflow = "auto";
       window.removeEventListener("keyup", handleKeyUp);
+      window.removeEventListener("wheel", disableScroll);
+      window.removeEventListener("touchmove", disableScroll);
     }
 
     return () => {
       document.body.style.overflow = "auto";
       window.removeEventListener("keyup", handleKeyUp);
+      window.removeEventListener("wheel", disableScroll);
+      window.removeEventListener("touchmove", disableScroll);
     };
   }, [show, onClose]);
 
