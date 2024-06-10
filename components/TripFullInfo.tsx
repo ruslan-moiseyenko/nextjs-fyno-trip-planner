@@ -18,6 +18,7 @@ export const TripFullInfo: FC<TripFullInfoProps> = ({ data }) => {
         title="Region highlights"
         icon={highlightsIcon}
         isProgressBar
+        showDailyButton
       />
       <PoiHighlights data={data.whereToStay} icon={bed} title="Where to stay" />
     </article>

@@ -9,9 +9,10 @@ import { StaticImageData } from "next/image";
 
 type PoiHighlightsProps = {
   title: string;
+  data: CardInfoType[];
   isProgressBar?: boolean;
   icon?: StaticImageData;
-  data: CardInfoType[];
+  showDailyButton?: boolean;
 };
 
 export const PoiHighlights: FC<PoiHighlightsProps> = ({
@@ -19,12 +20,15 @@ export const PoiHighlights: FC<PoiHighlightsProps> = ({
   title,
   icon,
   isProgressBar,
+  showDailyButton,
 }) => {
   return (
     <ProgressBar icon={icon} progress="" isProgressBar={isProgressBar}>
       <div className="mb-6 flex w-full justify-between">
         <h3 className="text-2xl font-medium">{title}</h3>
-        <ButtonWithIcon icon={list} text="Show daily plan" />
+        {showDailyButton && (
+          <ButtonWithIcon icon={list} text="Show daily plan" />
+        )}
       </div>
       <CardCarousel data={data} />
     </ProgressBar>

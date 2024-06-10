@@ -18,14 +18,14 @@ export const ProgressBar: FC<ProgressBarProps> = ({
     <div className="relative flex w-full">
       <div className={`ml-8 w-full px-3 pb-5 pl-8`}>{children}</div>
       <div
-        className={`${icon ? "bg-[#9D9DA1]" : "bg-violet"} absolute left-[22px] top-1 z-10 h-6 w-6 content-center items-center overflow-hidden rounded-full text-center text-xs font-medium text-white`}
+        className={`${icon ? "bg-[#9D9DA1]" : "bg-violet"} absolute left-[22px] top-1 z-10 flex h-6 w-6 content-center items-center justify-center overflow-hidden rounded-full text-center text-xs font-medium text-white`}
       >
         {icon ? (
           <Image
             src={icon}
             alt="icon"
-            width={24}
-            height={24}
+            width={18}
+            height={18}
             className="bg-[#9D9DA1]"
           />
         ) : (
