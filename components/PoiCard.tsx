@@ -15,6 +15,8 @@ export const PoiCard: FC<PoiCardProps> = ({ item }) => {
           src={item?.image}
           alt="image"
           fill={true}
+          objectFit="cover"
+          objectPosition="center"
           sizes="(max-width: 768px) 40vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>

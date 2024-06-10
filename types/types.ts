@@ -35,3 +35,10 @@ export type RegionType = {
   regionalHighlights: CardInfoType[];
   whereToStay: CardInfoType[];
 };
+
+export type DailyPlayType = {
+  id: number;
+  title: string;
+  estimatedTime: string;
+  plan: CardInfoType[];
+};

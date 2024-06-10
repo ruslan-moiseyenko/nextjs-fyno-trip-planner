@@ -1,12 +1,13 @@
+import { DailyPlan } from "@/components/DailyPlan";
 import React, { useEffect, ReactNode } from "react";
 
 interface ModalProps {
   show: boolean;
-  children?: ReactNode;
+
   onClose: () => void;
 }
 
-export const Modal: React.FC<ModalProps> = ({ show, onClose, children }) => {
+export const Modal: React.FC<ModalProps> = ({ show, onClose }) => {
   const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
       onClose();
@@ -43,7 +44,7 @@ export const Modal: React.FC<ModalProps> = ({ show, onClose, children }) => {
         <button className="absolute right-0 top-0 m-2" onClick={onClose}>
           &times;
         </button>
-        {children}
+        <DailyPlan />
       </div>
     </div>
   ) : null;
