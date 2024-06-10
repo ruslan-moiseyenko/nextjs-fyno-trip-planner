@@ -30,7 +30,7 @@ export const HorizontalCard: FC<HorizontalCardProps> = ({ item }) => {
                 Curator&apos;s pick
               </p>
             )}
-            <p className="text-text_trinary text-[15px] font-normal">{`${item.estimation} · ${item.description}`}</p>
+            <p className="text-text_trinary text-[15px] font-normal">{`${item.estimation} · ${item.description.split(",").join(" ·")}`}</p>
           </div>
           <div className="ml-auto flex gap-2">
             <button className="flex h-8 w-8 items-center justify-center">
