@@ -4,8 +4,12 @@ import React, { FC } from "react";
 
 type TripShortInfoProps = {
   tripInfo: ShortTripInfoType[];
+  scrollToComponent: () => void;
 };
-export const TripShortInfo: FC<TripShortInfoProps> = ({ tripInfo }) => {
+export const TripShortInfo: FC<TripShortInfoProps> = ({
+  tripInfo,
+  scrollToComponent,
+}) => {
   return (
     <section className="my-7 flex w-full items-center rounded-3xl border-[1px] border-border_gray p-6">
       <div className="flex gap-14">
@@ -18,7 +22,9 @@ export const TripShortInfo: FC<TripShortInfoProps> = ({ tripInfo }) => {
           </div>
         ))}
       </div>
-      <p className="ml-auto text-violet">View itinerary</p>
+      <button onClick={scrollToComponent} className="ml-auto text-violet">
+        View itinerary
+      </button>
     </section>
   );
 };
