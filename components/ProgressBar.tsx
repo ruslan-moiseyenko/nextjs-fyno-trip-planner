@@ -16,9 +16,9 @@ export const ProgressBar: FC<ProgressBarProps> = ({
 }) => {
   return (
     <div className="relative flex w-full">
-      <div className={`ml-8 w-full px-3 pb-5 pl-8`}>{children}</div>
+      <div className={`w-full pb-5 pl-14`}>{children}</div>
       <div
-        className={`${icon ? "bg-[#9D9DA1]" : "bg-violet"} absolute left-[22px] top-1 z-10 flex h-6 w-6 content-center items-center justify-center overflow-hidden rounded-full text-center text-xs font-medium text-white`}
+        className={`${icon ? "bg-[#9D9DA1]" : "bg-violet"} absolute left-2 top-1 z-10 flex h-6 w-6 content-center items-center justify-center overflow-hidden rounded-full border-2 border-white text-center text-xs font-medium text-white`}
       >
         {icon ? (
           <Image
@@ -33,7 +33,7 @@ export const ProgressBar: FC<ProgressBarProps> = ({
         )}
       </div>
       <div
-        className={`${isProgressBar ? "bg-border_light_gray" : "bg-transparent"} absolute left-8 top-2 z-0 h-full w-0.5`}
+        className={`${isProgressBar ? "bg-border_light_gray" : "bg-transparent"} absolute left-[19px] top-2 z-0 h-full w-0.5`}
       ></div>
     </div>
   );

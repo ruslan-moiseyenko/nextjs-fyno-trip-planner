@@ -13,7 +13,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sf-pro">{children}</body>
+      <body className="box-content font-sf-pro" suppressHydrationWarning={true}>
+        {children}
+      </body>
     </html>
   );
 }

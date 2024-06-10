@@ -6,6 +6,7 @@ import { ButtonWithIcon } from "@/components/ButtonWithIcon";
 import list from "@/assets/svg/list.svg";
 import { CardCarousel } from "@/components/CardCarousel";
 import { StaticImageData } from "next/image";
+import { PoiCard } from "@/components/PoiCard";
 
 type PoiHighlightsProps = {
   title: string;
@@ -30,7 +31,11 @@ export const PoiHighlights: FC<PoiHighlightsProps> = ({
           <ButtonWithIcon icon={list} text="Show daily plan" />
         )}
       </div>
-      <CardCarousel data={data} />
+      <CardCarousel>
+        {data.map((item) => (
+          <PoiCard key={item.id} item={item} />
+        ))}
+      </CardCarousel>
     </ProgressBar>
   );
 };

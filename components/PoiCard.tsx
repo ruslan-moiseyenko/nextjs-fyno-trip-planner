@@ -12,7 +12,12 @@ export const PoiCard: FC<PoiCardProps> = ({ item }) => {
   return (
     <article className="relative w-[216px]">
       <div className="relative h-[292px] w-[216px] overflow-hidden rounded-xl">
-        <Image src={item?.image} alt="image" fill={true} />
+        <Image
+          src={item?.image}
+          alt="image"
+          fill={true}
+          sizes="(max-width: 768px) 40vw, (max-width: 1200px) 50vw, 33vw"
+        />
       </div>
       <a href="#" className="cursor-pointer appearance-none">
         <div className="p-2">
@@ -32,7 +37,7 @@ export const PoiCard: FC<PoiCardProps> = ({ item }) => {
         <Image src={bookmark2} alt="bookmark" width={20} height={20} />
       </button>
       {item.isCuratorsPick && (
-        <p className="absolute left-6 top-6 rounded-lg bg-[#FFFFFF80] px-3 py-2 text-[13px] font-medium text-[#3C3C43] backdrop-blur-md">
+        <p className="absolute left-6 top-6 rounded-lg bg-[#FFFFFF80] px-3 py-1 text-[13px] font-medium text-[#3C3C43] backdrop-blur-md">
           Curator&apos;s pick
         </p>
       )}
