@@ -8,30 +8,25 @@ import img4 from "@/public/images/img4.jpg";
 import img5 from "@/public/images/img5.webp";
 import { ButtonAllPhotos } from "@/components/ButtonAllPhotos";
 
+const images = [img2, img3, img4, img5];
+
 export const Gallery = () => {
   return (
-    <section className="relative flex w-full gap-1 overflow-hidden rounded-3xl">
+    <section className="relative flex h-[292px] w-full gap-1 overflow-hidden rounded-3xl">
       <div className="h-1 flex-1">
         <Image src={img1} alt="img1" />
       </div>
 
-      <div className="flex h-1/2 flex-1 flex-col gap-1">
-        <div className="flex h-1 flex-1 gap-1">
-          <div className="flex-1">
-            <Image src={img2} alt="img1" />
-          </div>
-          <div className="flex-1">
-            <Image src={img3} alt="img1" />
-          </div>
-        </div>
-        <div className="flex h-1 flex-1 gap-1">
-          <div className="flex-1">
-            <Image src={img4} alt="img1" />
-          </div>
-          <div className="h-1 flex-1 object-none">
-            <Image src={img5} alt="img1" />
-          </div>
-        </div>
+      <div className="flex flex-1 flex-wrap gap-1">
+        {images.map((item, index) => (
+          <Image
+            key={index}
+            src={item}
+            alt="gallery"
+            width={175}
+            height={144}
+          />
+        ))}
       </div>
       <ButtonAllPhotos styles="absolute right-3 bottom-2 rounded-full overflow-hidden" />
     </section>

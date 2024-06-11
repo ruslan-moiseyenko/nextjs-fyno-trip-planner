@@ -16,19 +16,17 @@ export const RegionInfo: FC<RegionInfoProps> = ({
   return (
     <ProgressBar progress={alphabet[index]} isProgressBar>
       <h3 className="mb-1 text-xl font-semibold">{title}</h3>
-      <div className="mb-2 flex gap-4">
+      <ul className="mb-2 flex gap-4">
         {tags.map((item, index) => (
-          <p
+          <li
             key={`key-${index}${item}`}
-            className="text-text_trinary mr-4 text-sm font-normal"
+            className="mr-4 text-sm font-normal text-text_trinary"
           >
             {item}
-          </p>
+          </li>
         ))}
-      </div>
+      </ul>
       <p className="text-base font-normal text-text_secondary">{description}</p>
     </ProgressBar>
   );
 };
-
-//icon="📍"
